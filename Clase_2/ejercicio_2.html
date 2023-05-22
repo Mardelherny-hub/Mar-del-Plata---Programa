@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 - Formulario</title>
+</head>
+
+<body>
+
+    <h1>Formulario inscripción</h1>
+
+    <form action="#" method="post">
+        <fieldset>
+            <p>Datos Personales</p>
+            <p>
+                <label for="nombre">Nombres*</label>
+                <input type="text" name="nombres" placeholder="Acá tu nombre" required>
+            </p>
+            <p>
+                <label for="apellido">Apellido*</label>
+                <input type="text" name="apellido" placeholder="Acá tu apellido" required>
+            </p>
+            <p>
+                <label for="email">Email*</label>
+                <input type="email" name="email" id="email" placeholder="micorreo@mail.com" required>
+            </p>
+            <p>
+                <label for="telefono">Teléfono*</label>
+                <input type="tel" name="telefono" id="telefono" placeholder="02231555555" required>
+            </p>
+
+        </fieldset>
+        <fieldset>
+            <p>Domcilio</p>
+            <p>
+                <label for="calle">Calle</label>
+                <input type="text" placeholder="Calle"> <br>
+                <label for="numero">Número</label>
+                <input type="number" name="numero" id="numero" placeholder="112233">
+            </p>
+            <p>
+                <label for="ciudad">Ciudad</label>
+                <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad">
+            </p>
+            <p>
+                <label for="ciudad">Provincia</label>
+                <input type="text" name="provincia" id="provincia" placeholder="Provincia">
+            </p>
+        </fieldset>
+        <fieldset>
+            <p>Información adicional</p>
+            <label for="trabajo">Trabajas actualmente en IT?*</label>
+            <select name="trabajo" id="trabajo" required>
+                <option value="">Elige una opción</option>
+                <option value="1">Si</option>
+                <option value="2">No</option>
+            </select>
+            <p>
+                <label for="estudios">Breve descripción de tus estudios previos</label>
+                <textarea name="estudios" id="estudios" cols="30" rows="10" placeholder="Cuéntanos que experiencias previas tienes en programación"></textarea>
+            </p>
+        </fieldset>
+        <fieldset>
+            <p>
+                <input type="checkbox" name="acept" id="acept" required> Acepto los términos y codiciones
+            </p>
+            <p>
+                <button type="submit">Inscribirme</button>
+            </p>
+        </fieldset>
+
+    </form>
+
+</body>
+
+</html>

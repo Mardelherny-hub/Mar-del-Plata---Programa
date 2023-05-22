@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 - html</title>
+</head>
+
+<body>
+
+    <h1>Etiquetas de párrafos</h1>
+    <p>Párrafo</p>
+    <h1>Encabezados 1</h1>
+    <h2>Encabezados 2</h2>
+    <h3>Encabezados 3</h3>
+    <h4>Encabezados 4</h4>
+    <h5>Encabezados 5</h5>
+    <h6>Encabezados 6</h6>
+    <p>Párrafo con <br>salto de linea</p>
+
+    <a href="#">Enlace</a>
+    <p>
+        <b>Negrita</b><br>
+        <strong>Negrita</strong><br>
+        <i>Itálica</i><br>
+        <u>subrayado</u>
+    </p>
+    <pre>
+        Código:
+        <pre>
+            &lt;?php&gt;
+            <pre>
+                echo 'salida por pantalla'
+            </pre>
+            &lt;?&gt;  
+        </pre>
+    </pre>
+    <hr>
+    <p>Listas</p>
+    <ol>Ordenadas
+        <li>uno</li>
+        <li>dos</li>
+        <li>tres</li>
+    </ol>
+    <ul>Sin Ordenadas
+        <li>punto uno</li>
+        <li>punto dos</li>
+        <li>punto tres</li>
+    </ul>
+    <hr>
+    <p>Formulario</p>
+    <form action="#" method="post">
+        <label for="">texto</label>
+        <input type="text"><br>
+        <label for="">textarea</label>
+        <textarea name="0" id="" cols="19" rows="4"></textarea><br>
+        <label for="">Selección</label>
+        <select name="" id="">
+            <option value="1">uno</option>
+            <option value="2">dos</option>
+            <option value="3">tres</option>
+        </select><br>
+        <label for="">check point</label><br>
+        <label for=""> blanco</label>
+        <input type="checkbox" name="blanco" value="blanco">
+        <label for="">negro</label>
+        <input type="checkbox" name="negro" value="negro">
+        <label for="">rojo</label>
+        <input type="checkbox" name="rojo" value="rojo">
+        <label for="telefono">teléfono, obligatorio </label>
+      <input type="tel" id="telefono" name="telefono" required  aria-describedby="descripcionContra" 
+            pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}' >
+      <p id="descripcionContra" class="ayuda">Formato: +99(99)9999-9999</p>
+  
+      <label for="url">campo url obligatorio: </label>
+      <input type="url" id="url" name="url" required size="50">
+    
+      <label for="email">campo email obligatorio y texto por defecto: </label>    
+      <input type="email" id="email" name="correo" required placeholder="micorreo@gmail.com" size="50">
+      
+      <input type="submit" name="Enviar" id="Enviar" value="Enviar">
+
+    </form>
+
+</body>
+
+</html>
