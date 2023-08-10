@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuadrados Superpuestos con z-index</title>
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+        }
+        
+        /* Cuadrados superpuestos */
+        .square {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+        
+        /* Primer cuadrado */
+        .square-1 {
+            background-color: #3498db;
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
+        
+        /* Segundo cuadrado */
+        .square-2 {
+            background-color: #e74c3c;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+        }
+        
+        /* Tercer cuadrado */
+        .square-3 {
+            background-color: #2ecc71;
+            top: 40px;
+            left: 40px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="square square-1"></div>
+    <div class="square square-2"></div>
+    <div class="square square-3"></div>
+</body>
+</html>

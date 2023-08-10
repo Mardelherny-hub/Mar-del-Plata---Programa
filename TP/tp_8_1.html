@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe corregido con CSS Grid</title>
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Contenedor principal utilizando Grid */
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr; /* Dividir en dos columnas */
+            grid-template-rows: 1fr 1fr; /* Dividir en dos filas */
+            gap: 20px; /* Espacio entre columnas y filas */
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        
+        /* Caja en la primera columna ocupando dos filas */
+        .box1 {
+            grid-row: span 2; /* Ocupa dos filas */
+            background-color: #3498db;
+            padding: 20px;
+            color: #ffffff;
+        }
+        
+        /* Dos cajas en la segunda columna */
+        .box2, .box3 {
+            background-color: #e74c3c;
+            padding: 20px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">
+            <h2>Caja 1 (2 filas)</h2>
+            <p>Contenido de la primera caja ocupando dos filas.</p>
+        </div>
+        <div class="box2">
+            <h2>Caja 2</h2>
+            <p>Contenido de la segunda caja.</p>
+        </div>
+        <div class="box3">
+            <h2>Caja 3</h2>
+            <p>Contenido de la tercera caja.</p>
+        </div>
+    </div>
+</body>
+</html>

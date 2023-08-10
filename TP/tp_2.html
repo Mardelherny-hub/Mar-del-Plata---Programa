@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción al Curso</title>
+    
+</head>
+<body>
+    <div class="container">
+        <h2>Inscripción al Curso</h2>
+        <form action="#" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+            
+            <label for="pais">País:</label>
+            <select id="pais" name="pais" required>
+                <option value="">Seleccione su país</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Chile">Chile</option>
+                <option value="Colombia">Colombia</option>
+                <option value="México">México</option>
+                <option value="Perú">Perú</option>
+                <!-- Agregar más opciones aquí -->
+            </select>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label>¿Trabaja?</label>
+            <label><input type="radio" name="trabaja" value="si"> Sí</label>
+            <label><input type="radio" name="trabaja" value="no"> No</label>
+            
+            <button type="submit">Enviar Inscripción</button>
+        </form>
+    </div>
+</body>
+</html>

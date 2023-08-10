@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio Web de Comidas</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        /* Estilos del encabezado */
+        header {
+            background-color: #35424a;
+            color: #ffffff;
+            padding: 1em;
+            display: flex; /* Utilizamos Flexbox para alinear el logo y el menú horizontalmente */
+            justify-content: space-between; /* Distribuye los elementos a los extremos */
+            align-items: center; /* Centra verticalmente los elementos */
+        }
+        
+        /* Estilos del logo */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        /* Estilos del menú de navegación */
+        nav {
+            display: flex; /* Utilizamos Flexbox para alinear los enlaces horizontalmente */
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 1em;
+        }
+        
+        /* Estilos del carrusel de imágenes */
+        .carousel {
+            max-width: 100%;
+            height: auto;
+            margin: 2em 0;
+        }
+        
+        /* Estilos del contenedor principal */
+        .container {
+            display: flex; /* Utilizamos Flexbox para crear una cuadrícula de tarjetas */
+            flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente fila cuando no haya suficiente espacio */
+            justify-content: center; /* Centra las tarjetas horizontalmente */
+            max-width: 1200px;
+            margin: auto;
+            padding: 2em;
+        }
+        
+        /* Estilos de las tarjetas */
+        .card {
+            flex: 1; /* Hace que las tarjetas ocupen un espacio igual en la fila */
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: 1em;
+            padding: 1.5em;
+            text-align: center;
+        }
+        
+        /* Estilos de las imágenes en las tarjetas */
+        .card img {
+            max-width: 100%;
+        }
+        
+        /* Estilos del pie de página */
+        footer {
+            background-color: #35424a;
+            color: #ffffff;
+            text-align: center;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Logo</div>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Menú</a>
+            <a href="#">Reservas</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+    <img class="carousel" src="img/big_55.jpg" alt="Imagen del Carrusel">
+    <div class="container">
+        <div class="card">
+            <img src="img/0103-served-plate_128.png" alt="Comida 1">
+            <h2>Plato 1</h2>
+            <p>Descripción del plato 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="card">
+            <img src="img/0301-pina-colada_64.png" alt="Comida 2">
+            <h2>Plato 2</h2>
+            <p>Descripción del plato 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="card">
+            <img src="img/type-3.png" alt="Comida 3">
+            <h2>Plato 3</h2>
+            <p>Descripción del plato 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Sitio Web de Comidas. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+```
+

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Consultas Bancarias</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Estilos del formulario */
+        .form-container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        
+        /* Estilos para los campos de entrada */
+        input[type="text"], input[type="email"], input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        /* Estilos para los radio buttons */
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        /* Estilos para el botón de envío */
+        input[type="submit"] {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        /* Estilos para los mensajes de éxito o error */
+        .message {
+            margin-top: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .success {
+            background-color: #2ecc71;
+            color: #fff;
+        }
+        
+        .error {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Consulta Bancaria</h2>
+        <form id="consultation-form">
+            <label for="account-type">Tipo de Cuenta:</label>
+            <input type="radio" name="account-type" value="ahorro" id="account-ahorro">
+            <label for="account-ahorro">Cuenta de Ahorro</label>
+            <input type="radio" name="account-type" value="corriente" id="account-corriente">
+            <label for="account-corriente">Cuenta Corriente</label>
+            
+            <label for="question">Pregunta:</label>
+            <input type="text" name="question" id="question">
+            
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+            
+            <label for="phone">Teléfono:</label>
+            <input type="tel" name="phone" id="phone">
+            
+            <input type="submit" value="Enviar Consulta">
+        </form>
+        <div class="message" id="message"></div>
+    </div>
+    
+    <script>
+        // Función para manejar el envío del formulario
+        document.getElementById('consultation-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenir el envío del formulario por defecto
+            
+            // Validar campos antes de enviar (puede agregar más validaciones según necesidad)
+            const accountType = document.querySelector('input[name="account-type"]:checked');
+            const question = document.getElementById('question').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            
+            if (!accountType || !question || !email || !phone) {
+                showMessage('Por favor, complete todos los campos', 'error');
+            } else {
+                showMessage('Consulta enviada con éxito', 'success');
+                // Aquí podría agregar lógica adicional para enviar la consulta a un servidor
+            }
+        });
+        
+        // Función para mostrar mensajes
+        function showMessage(message, className) {
+            const messageDiv = document.getElementById('message');
+            messageDiv.textContent = message;
+            messageDiv.className = `message ${className}`;
+            setTimeout(() => {
+                messageDiv.textContent = '';
+                messageDiv.className = 'message';
+            }, 3000); // Limpiar mensaje después de 3 segundos
+        }
+    </script>
+</body>
+</html>

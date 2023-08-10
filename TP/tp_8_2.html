@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de CSS Grid</title>
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Contenedor principal A utilizando Grid */
+        .container-a {
+            display: grid;
+            grid-template-rows: repeat(2, 1fr); /* Dos filas en contenedor A */
+            grid-template-columns: 1fr; /* Una columna en contenedor A */
+            gap: 10px; /* Espacio entre columnas y filas */
+            padding: 10px;
+            background-color: #f4f4f4;
+        }
+
+        /* Fila A1 con tres filas y una columna */
+        .row-a1 {
+            display: grid;
+            grid-template-rows: repeat(3, 1fr); /* Tres filas en fila A1 */
+            grid-template-columns: 1fr; /* Una columna en fila A1 */
+            gap: 5px; /* Espacio entre columnas y filas */
+        }
+
+        /* Caja en la primera fila de fila A1 */
+        .box-a1 {
+            background-color: #3498db;
+            padding: 10px;
+            color: #ffffff;
+        }
+
+        /* Fila A2 con tres columnas y dos filas */
+        .row-a2 {
+            display: grid;
+            grid-template-rows: 2fr 1fr; /* Dos filas en fila A2 */
+            grid-template-columns: repeat(3, 1fr); /* Tres columnas en fila A2 */
+            gap: 10px; /* Espacio entre columnas y filas */
+        }
+
+        /* Primera caja en la primera columna de fila A2, ocupando dos filas */
+        .box-a2 {
+            grid-row: span 2; /* Ocupa dos filas */
+            background-color: #e74c3c;
+            padding: 20px;
+            color: #ffffff;
+        }
+
+        /* Segunda caja en la segunda columna de fila A2 */
+        .box-a3 {
+            background-color: #2ecc71;
+            padding: 20px;
+            color: #ffffff;
+        }
+
+        /* Tercera caja en la segunda columna de fila A2 */
+        .box-a4 {
+            background-color: #9b59b6;
+            padding: 20px;
+            color: #ffffff;
+        }
+
+        /* Cuarta caja en la tercera columna de fila A2, en la primera fila */
+        .box-a5 {
+            background-color: #f39c12;
+            padding: 20px;
+            color: #ffffff;
+        }
+
+        /* Quinta caja en la tercera columna de fila A2 */
+        .box-a6 {
+            background-color: #16a085;
+            padding: 20px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-a">
+        <div class="row-a1">
+            <div class="box-a1">
+                <h2>Caja A1 (Fila 1)</h2>
+                <p>Contenido de la primera caja en la fila A1.</p>
+            </div>
+            <div class="box-a1">
+                <h2>Caja A1 (Fila 2)</h2>
+                <p>Contenido de la segunda caja en la fila A1.</p>
+            </div>
+            <div class="box-a1">
+                <h2>Caja A1 (Fila 3)</h2>
+                <p>Contenido de la tercera caja en la fila A1.</p>
+            </div>
+        </div>
+        <div class="row-a2">
+            <div class="box-a2">
+                <h2>Caja A2 (2 filas)</h2>
+                <p>Contenido de la primera caja en la fila A2, ocupando dos filas.</p>
+            </div>
+            <div class="box-a3">
+                <h2>Caja A3</h2>
+                <p>Contenido de la segunda caja en la fila A2.</p>
+            </div>
+            <div class="box-a4">
+                <h2>Caja A4</h2>
+                <p>Contenido de la tercera caja en la fila A2.</p>
+            </div>
+            <div class="box-a5">
+                <h2>Caja A5 (Fila 1)</h2>
+                <p>Contenido de la primera caja en la tercera columna.</p>
+            </div>
+            <!-- <div class="box-a6">
+                <h2>Caja A6</h2>
+                <p>Contenido de la segunda caja en la tercera columna.</p>
+            </div> -->
+        </div>
+    </div>
+</body>
+</html>
