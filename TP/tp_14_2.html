@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlace a los estilos de Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace a SweetAlert CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.6/dist/sweetalert2.min.css" rel="stylesheet">
+    <title>Datos del Viajero</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Ingrese los datos del viajero</h2>
+        <form id="datosViajeroForm">
+            <!-- Campo: Nombre -->
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" >
+            </div>
+            
+            <!-- Campo: Destino -->
+            <div class="form-group">
+                <label for="destino">Destino:</label>
+                <input type="text" class="form-control" id="destino" name="destino" >
+            </div>
+            
+            <!-- Botón de Enviar -->
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+    
+    <!-- Enlace a los scripts de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Enlace a SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.6/dist/sweetalert2.all.min.js"></script>
+    <script>
+        // Escuchar el envío del formulario
+        document.getElementById('datosViajeroForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Evita el envío tradicional del formulario
+
+            // Obtener los valores de los campos
+            var nombre = document.getElementById('nombre').value;
+            var destino = document.getElementById('destino').value;
+
+            // Verificar si los campos están vacíos
+            if (nombre === '' || destino === '') {
+                // Mostrar alerta de error utilizando SweetAlert
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Por favor, complete todos los campos.'
+                });
+            } else {
+                // Mostrar mensaje de éxito utilizando SweetAlert
+                Swal.fire({
+                    icon: 'success',
+                    title: '¡Éxito!',
+                    text: 'Los datos del viajero fueron guardados correctamente.'
+                });
+            }
+        });
+    </script>
+</body>
+</html>

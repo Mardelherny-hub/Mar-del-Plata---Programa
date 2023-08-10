@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlace a los estilos de Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Tienda para Mascotas</title>
+    <style>
+        /* Agrega estilos personalizados aquí si es necesario */
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="bg-info text-white text-center py-4">
+        <h1>Tienda para Mascotas</h1>
+        <p>Todo lo que tu mascota necesita</p>
+    </header>
+    
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                    <!-- Menú desplegable -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                            Opciones
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Servicios</a>
+                            <a class="dropdown-item" href="#">Ofertas</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Acerca de nosotros</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Contenido principal -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="img/img.jpg" alt="Mascota" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6">
+                <h2>Descubre a tu compañero peludo</h2>
+                <p>En nuestra tienda encontrarás una amplia selección de mascotas para elegir, desde perros y gatos hasta peces y reptiles. ¡Ven y encuentra a tu nuevo mejor amigo!</p>
+                <a href="#" class="btn btn-primary">Ver productos</a>
+                <a href="#" class="btn btn-success ml-2">Ofertas</a>
+                <!-- Alerta -->
+                <div class="alert alert-warning mt-3">
+                    ¡No te pierdas nuestras ofertas especiales esta semana!
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tarjetas de Productos -->
+        <div class="row mt-5">
+            <!-- Tarjeta 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/producto1.jpeg" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 1</h5>
+                        <p class="card-text">Un producto esencial para tu mascota. ¡Descúbrelo ahora!</p>
+                        <a href="#" class="btn btn-primary">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tarjeta 2 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/producto2.jpeg" class="card-img-top" alt="Producto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 2</h5>
+                        <p class="card-text">El regalo perfecto para tu mascota. ¡Ordénalo hoy mismo!</p>
+                        <a href="#" class="btn btn-primary">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tarjeta 3 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/producto3.jpeg" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 3</h5>
+                        <p class="card-text">Una opción saludable y deliciosa para tu mascota. ¡No te la pierdas!</p>
+                        <a href="#" class="btn btn-primary">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2023 Tienda de Mascotas</p>
+    </footer>
+    
+    <!-- Enlace a los scripts de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

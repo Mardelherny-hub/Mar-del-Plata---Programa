@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlace a los estilos de Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace a SweetAlert CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.6/dist/sweetalert2.min.css" rel="stylesheet">
+    <title>Formulario de Alta de Usuarios</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Formulario de Alta de Usuarios</h2>
+        <form id="altaUsuariosForm">
+            <!-- Campo: Nombre -->
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            
+            <!-- Campo: Apellido -->
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" class="form-control" id="apellido" name="apellido" required>
+            </div>
+            
+            <!-- Botón de Enviar -->
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+    
+    <!-- Enlace a los scripts de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Enlace a SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.6/dist/sweetalert2.all.min.js"></script>
+    <script>
+        // Función para mostrar SweetAlert de éxito
+        function mostrarExito() {
+            Swal.fire({
+                icon: 'success',
+                title: '¡Éxito!',
+                text: 'Los datos fueron guardados correctamente.'
+            });
+        }
+
+        // Función para mostrar SweetAlert de error
+        function mostrarError() {
+            Swal.fire({
+                icon: 'error',
+                title: '¡Error!',
+                text: 'Por favor, completa todos los campos.'
+            });
+        }
+
+        // Escuchar el envío del formulario
+        document.getElementById('altaUsuariosForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Evita el envío tradicional del formulario
+
+            // Obtener los valores de los campos
+            var nombre = document.getElementById('nombre').value;
+            var apellido = document.getElementById('apellido').value;
+
+            // Verificar si los campos están vacíos
+            if (nombre === '' || apellido === '') {
+                mostrarError();
+            } else {
+                mostrarExito();
+            }
+        });
+    </script>
+</body>
+</html>
